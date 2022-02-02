@@ -58,6 +58,12 @@ public class Player extends SpaceObject {
         up = b;
     }
 
+    public float getX() {return x;}
+
+    public float getY() {return y;}
+
+    public float getRad() {return radians;}
+
     public void update(float dt) {
 
         // turning
