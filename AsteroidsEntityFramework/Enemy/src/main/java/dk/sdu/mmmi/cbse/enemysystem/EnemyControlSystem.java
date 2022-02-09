@@ -7,8 +7,6 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 
-import static dk.sdu.mmmi.cbse.common.data.GameKeys.*;
-
 public class EnemyControlSystem implements IEntityProcessingService {
 
     @Override
@@ -18,9 +16,9 @@ public class EnemyControlSystem implements IEntityProcessingService {
             PositionPart positionPart = enemy.getPart(PositionPart.class);
             MovingPart movingPart = enemy.getPart(MovingPart.class);
 
-            //movingPart.setLeft(gameData.getKeys().isDown(LEFT));
-            //movingPart.setRight(gameData.getKeys().isDown(RIGHT));
-            //movingPart.setUp(gameData.getKeys().isDown(UP));
+            movingPart.setLeft(Math.random() > 0.1f ? true : false);
+            movingPart.setRight(Math.random() > 0.1f ? true : false);
+            movingPart.setUp(Math.random() > 0.1f ? true : false);
 
 
             movingPart.process(gameData, enemy);
