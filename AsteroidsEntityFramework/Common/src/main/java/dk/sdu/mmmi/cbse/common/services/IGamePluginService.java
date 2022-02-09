@@ -12,7 +12,7 @@ public interface IGamePluginService {
     void start(GameData gameData, World world);
 
     /**
-     * this method is called when the game is stopped
+     * this method is called when the game is stopped. Only works once game has started once.
      * @param gameData The gamedata
      * @param world The worlddata
      */
