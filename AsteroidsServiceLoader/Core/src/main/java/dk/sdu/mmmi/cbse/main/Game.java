@@ -46,6 +46,7 @@ public class Game
 
         // Lookup all Game Plugins using ServiceLoader
         for (IGamePluginService iGamePlugin : getPluginServices()) {
+            System.out.println(iGamePlugin);
             iGamePlugin.start(gameData, world);
         }
     }
