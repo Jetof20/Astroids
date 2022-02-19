@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="533705b1-14ea-4925-8e38-000c154d1bac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
@@ -16,13 +15,16 @@
       <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Bullet/src/main/java/dk/sdu/mmmi/cbse/bulletsystem/Bullet.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Bullet/src/main/java/dk/sdu/mmmi/cbse/bulletsystem/BulletControlSystem.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Bullet/src/main/java/dk/sdu/mmmi/cbse/bulletsystem/BulletPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Bullet/src/main/resources/META-INF/services/dk.sdu.mmmi.cbse.common.services.IEntityProcessingService" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Bullet/src/main/resources/META-INF/services/dk.sdu.mmmi.cbse.common.services.IGamePluginService" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Enemy/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Enemy/src/main/java/dk/sdu/mmmi/cbse/enemysystem/Enemy.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Enemy/src/main/java/dk/sdu/mmmi/cbse/enemysystem/EnemyControlSystem.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Enemy/src/main/java/dk/sdu/mmmi/cbse/enemysystem/EnemyPlugin.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Enemy/src/main/resources/META-INF/services/dk.sdu.mmmi.cbse.common.services.IEntityProcessingService" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Enemy/src/main/resources/META-INF/services/dk.sdu.mmmi.cbse.common.services.IGamePluginService" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Core/src/main/java/dk/sdu/mmmi/cbse/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Core/src/main/java/dk/sdu/mmmi/cbse/main/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/Core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../AsteroidsServiceLoader/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AsteroidsServiceLoader/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1645107851253</updated>
       <workItem from="1645107852556" duration="1108000" />
+      <workItem from="1645277126271" duration="1018000" />
     </task>
     <servers />
   </component>
