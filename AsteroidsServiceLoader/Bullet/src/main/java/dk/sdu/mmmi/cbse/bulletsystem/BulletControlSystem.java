@@ -3,15 +3,17 @@ package dk.sdu.mmmi.cbse.bulletsystem;
 import dk.sdu.mmmi.cbse.common.data.Entity;
 import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
+import dk.sdu.mmmi.cbse.common.data.entityparts.DespawnPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.LifePart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
+import dk.sdu.mmmi.cbse.common.services.BulletMaker;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
 
-public class BulletControlSystem implements IEntityProcessingService {
+public class BulletControlSystem implements IEntityProcessingService, BulletMaker {
 
     @Override
     public void process(GameData gameData, World world) {
@@ -20,14 +22,19 @@ public class BulletControlSystem implements IEntityProcessingService {
 
             PositionPart positionPart = bullet.getPart(PositionPart.class);
             MovingPart movingPart = bullet.getPart(MovingPart.class);
+            DespawnPart despawnPart = bullet.getPart(DespawnPart.class);
             movingPart.setUp(true);
             movingPart.process(gameData, bullet);
             positionPart.process(gameData, bullet);
-
+            despawnPart.process(gameData,bullet);
+            if (despawnPart.getDespawnTime() <= 0) {
+                world.removeEntity(bullet);
+            }
             setShape(bullet);
         }
     }
 
+    @Override
     public Entity createBullet(Entity shooter, GameData gameData) {
         PositionPart shooterPos = shooter.getPart(PositionPart.class);
         MovingPart shooterMovingPart = shooter.getPart(MovingPart.class);
@@ -47,6 +54,7 @@ public class BulletControlSystem implements IEntityProcessingService {
         bullet.add(new PositionPart(bx + x, by + y, radians));
         bullet.add(new LifePart(1,69));
         bullet.add(new MovingPart(0, 5000000, speed, 5));
+        bullet.add(new DespawnPart(100));
 
         bullet.setShapeX(new float[2]);
         bullet.setShapeY(new float[2]);

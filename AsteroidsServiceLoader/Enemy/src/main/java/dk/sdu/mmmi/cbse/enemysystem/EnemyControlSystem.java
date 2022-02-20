@@ -5,7 +5,9 @@ import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
+import dk.sdu.mmmi.cbse.common.services.BulletMaker;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
+import dk.sdu.mmmi.cbse.common.util.SPILocator;
 
 import static dk.sdu.mmmi.cbse.common.data.GameKeys.*;
 
@@ -25,7 +27,12 @@ public class EnemyControlSystem implements IEntityProcessingService {
             movingPart.setLeft(Math.random() < 0.1f ? true : false);
             movingPart.setRight(Math.random() < 0.1f ? true : false);
             movingPart.setUp(Math.random() < 0.1f ? true : false);
-            
+
+            if(Math.random() < 0.05f ? true : false) {
+                for (BulletMaker bm : SPILocator.locateAll(BulletMaker.class)) {
+                    world.addEntity(bm.createBullet(enemy,gameData));
+                }
+            }
             
             movingPart.process(gameData, enemy);
             positionPart.process(gameData, enemy);
