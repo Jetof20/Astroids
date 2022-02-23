@@ -15,9 +15,7 @@ import dk.sdu.mmmi.cbse.core.managers.GameInputProcessor;
 import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import org.openide.util.Lookup;
-import org.openide.util.LookupEvent;
-import org.openide.util.LookupListener;
+import org.openide.util.*;
 
 public class Game implements ApplicationListener {
 
