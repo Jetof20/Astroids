@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-OpenIDE-Module-Localizing-Bundle: dk/sdu/cbse/helloworld/Bundle.properties
+OpenIDE-Module-Localizing-Bundle: dk/sdu/sbse/nbruntimeexample12/startup/Init.class

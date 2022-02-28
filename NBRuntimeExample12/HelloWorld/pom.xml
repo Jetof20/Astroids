@@ -16,7 +16,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <publicPackages>
-                        <publicPackage>dk.sdu.cbse.helloworld</publicPackage>
+                        <publicPackage>dk.sdu.sbse.nbruntimeexample12.startup</publicPackage>
                     </publicPackages>
                 </configuration>                
             </plugin>
@@ -36,6 +36,11 @@
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-api-annotations-common</artifactId>
             <version>${netbeans.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-modules</artifactId>
+            <version>RELEASE112</version>
         </dependency>
     </dependencies>
     <properties>
