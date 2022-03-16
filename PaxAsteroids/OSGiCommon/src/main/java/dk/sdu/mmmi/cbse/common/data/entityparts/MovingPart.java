@@ -77,7 +77,7 @@ public class MovingPart implements EntityPart {
         float y = positionPart.getY();
         float radians = positionPart.getRadians();
         float dt = gameData.getDelta();
-
+        //System.out.println("Framerate: "+(1/dt));
         // turning
         if (left) {
             radians += rotationSpeed * dt;
