@@ -9,6 +9,8 @@ import dk.sdu.mmmi.cbse.common.data.entityparts.MovingPart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
 import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 
+import static dk.sdu.mmmi.cbse.common.data.GameKeys.*;
+
 public class PlayerProcessor implements IEntityProcessingService {
 
     private BulletSPI bulletService;
@@ -22,11 +24,11 @@ public class PlayerProcessor implements IEntityProcessingService {
             PositionPart positionPart = entity.getPart(PositionPart.class);
             MovingPart movingPart = entity.getPart(MovingPart.class);
             double random = Math.random();
-            movingPart.setLeft(random < 0.2);
-            movingPart.setRight(random > 0.3 && random < 0.5);
-            movingPart.setUp(random > 0.7 && random < 0.9);
+            movingPart.setLeft(gameData.getKeys().isDown(LEFT));
+            movingPart.setRight(gameData.getKeys().isDown(RIGHT));
+            movingPart.setUp(gameData.getKeys().isDown(UP));
             
-            if (random > 0.98 && bulletService != null) {
+            if (gameData.getKeys().isDown(SPACE) && bulletService != null) {
                 Entity bullet = bulletService.createBullet(entity, gameData);
                 world.addEntity(bullet);
             }
