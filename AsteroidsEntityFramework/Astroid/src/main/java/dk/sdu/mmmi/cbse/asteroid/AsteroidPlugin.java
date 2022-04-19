@@ -23,8 +23,10 @@ public class AsteroidPlugin implements IGamePluginService, IPostEntityProcessing
 
     @Override
     public void start(GameData gameData, World world) {
-       asteroid = createLargeAsteroid(gameData);
-       world.addEntity(asteroid);
+        for (int i = 0; i < 20; i++) {
+            asteroid = createLargeAsteroid(gameData);
+            world.addEntity(asteroid);
+        }
     }
 
     @Override

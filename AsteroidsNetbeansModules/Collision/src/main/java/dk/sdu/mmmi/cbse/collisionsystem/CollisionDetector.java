@@ -5,15 +5,20 @@ import dk.sdu.mmmi.cbse.common.data.GameData;
 import dk.sdu.mmmi.cbse.common.data.World;
 import dk.sdu.mmmi.cbse.common.data.entityparts.LifePart;
 import dk.sdu.mmmi.cbse.common.data.entityparts.PositionPart;
+import dk.sdu.mmmi.cbse.common.services.IEntityProcessingService;
 import dk.sdu.mmmi.cbse.common.services.IPostEntityProcessingService;
+import org.openide.util.Lookup;
 import org.openide.util.lookup.ServiceProvider;
+import org.openide.util.lookup.ServiceProviders;
 
-@ServiceProvider(service = IPostEntityProcessingService.class)
+@ServiceProviders(value = {
+    @ServiceProvider(service = IPostEntityProcessingService.class),})
 public class CollisionDetector implements IPostEntityProcessingService {
 
     @Override
     public void process(GameData gameData, World world) {
         // two for loops for all entities in the world
+        System.out.println("Collision");
         for (Entity entity : world.getEntities()) {
             for (Entity collisionDetection : world.getEntities()) {
                 // get life parts on all entities
